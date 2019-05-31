@@ -1,5 +1,4 @@
-version: 2
-
+version: 2.1
 jobs:
   build_data:
     docker:
@@ -22,5 +21,3 @@ workflows:
                 - master
     jobs:
       - build_data
-
-
