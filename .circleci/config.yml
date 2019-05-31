@@ -1,7 +1,8 @@
 workflows:
   version: 2
-  jobs:
-    - build_data
+  ruby-build:
+    jobs:
+      - build_data
   scheduled-workflow:
     triggers:
       - schedule:
