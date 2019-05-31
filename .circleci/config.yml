@@ -1,16 +1,7 @@
-version: 2.1
-jobs:
-  build_data:
-    docker:
-      - image: circleci/ruby:2.4.1-jessie
-    steps:
-      - checkout
-      - run: bundle install
-      - run: bundle exec ruby scripts/update_data.rb
-      - run: bash scripts/create_pull_request_if_needed.sh
-
 workflows:
   version: 2
+  jobs:
+    - build_data
   scheduled-workflow:
     triggers:
       - schedule:
@@ -21,3 +12,13 @@ workflows:
                 - master
     jobs:
       - build_data
+version: 2
+jobs:
+  build_data:
+    docker:
+      - image: circleci/ruby:2.4.1-jessie
+    steps:
+      - checkout
+      - run: bundle install
+      - run: bundle exec ruby scripts/update_data.rb
+      - run: bash scripts/create_pull_request_if_needed.sh
