@@ -241,15 +241,15 @@ class ParseCsvAndGenerateJson
   def make_zip_json(rows)
     zip_code_params = rows.map {|row|
       {
-        'prefecture_jis_code'  => row.prefecture_jis_code ,
-        'city_jis_code'        => row.city_jis_code       ,
-        'zip_code'             => row.zip_code            ,
-        'prefecture_name_kana' => row.prefecture_name_kana,
-        'city_name_kana'       => row.city_name_kana      ,
-        'town_name_kana'       => row.town_name_kana      ,
-        'prefecture_name'      => row.prefecture_name     ,
-        'city_name'            => row.city_name           ,
-        'town_name'            => row.town_name           ,
+        'prefectureJisCode'  => row.prefecture_jis_code ,
+        'cityJisCode'        => row.city_jis_code       ,
+        'zipCode'            => row.zip_code            ,
+        'prefectureNameKana' => row.prefecture_name_kana,
+        'cityNameKana'       => row.city_name_kana      ,
+        'townNameKana'       => row.town_name_kana      ,
+        'prefectureName'      => row.prefecture_name     ,
+        'cityName'          => row.city_name           ,
+        'townName'            => row.town_name           ,
       }
     }
     JSON.dump(zip_code_params)
@@ -258,12 +258,12 @@ class ParseCsvAndGenerateJson
   def make_city_json(city_rows)
     city_params = city_rows.map {|city_row|
       {
-        'prefecture_jis_code'  => city_row.prefecture_jis_code ,
-        'city_jis_code'        => city_row.city_jis_code       ,
-        'prefecture_name_kana' => city_row.prefecture_name_kana,
-        'city_name_kana'       => city_row.city_name_kana      ,
-        'prefecture_name'      => city_row.prefecture_name     ,
-        'city_name'            => city_row.city_name           ,
+        'prefectureJisCode'  => city_row.prefecture_jis_code ,
+        'cityJisCode'        => city_row.city_jis_code       ,
+        'prefectureNameKana' => city_row.prefecture_name_kana,
+        'cityNameKana'       => city_row.city_name_kana      ,
+        'prefectureName'      => city_row.prefecture_name     ,
+        'cityName'          => city_row.city_name           ,
       }
     }
     JSON.dump(city_params)
@@ -272,11 +272,11 @@ class ParseCsvAndGenerateJson
   def make_town_json(town_rows)
     town_params = town_rows.map {|town_row|
       {
-        'prefecture_jis_code'  => town_row.prefecture_jis_code ,
-        'city_jis_code'        => town_row.city_jis_code       ,
-        'town_name_kana'       => town_row.town_name_kana      ,
-        'town_name'            => town_row.town_name           ,
-        'zip_code'             => town_row.zip_code            ,
+        'prefectureJisCode'  => town_row.prefecture_jis_code ,
+        'cityJisCode'        => town_row.city_jis_code       ,
+        'townNameKana'       => town_row.town_name_kana      ,
+        'townName'            => town_row.town_name           ,
+        'zipCode'            => town_row.zip_code            ,
       }
     }
     JSON.dump(town_params)
@@ -285,9 +285,9 @@ class ParseCsvAndGenerateJson
   def make_prefecture_json(prefecture_rows)
     prefecture_params = prefecture_rows.map {|prefecture_row|
       {
-        'prefecture_jis_code'  => prefecture_row.prefecture_jis_code ,
-        'prefecture_name_kana' => prefecture_row.prefecture_name_kana,
-        'prefecture_name'      => prefecture_row.prefecture_name     ,
+        'prefectureJisCode'  => prefecture_row.prefecture_jis_code ,
+        'prefectureNameKana' => prefecture_row.prefecture_name_kana,
+        'prefectureName'      => prefecture_row.prefecture_name     ,
       }
     }
     JSON.dump(prefecture_params)
