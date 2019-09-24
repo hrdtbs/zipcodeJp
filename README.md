@@ -2,7 +2,7 @@
 
 forked from [kmdsbng/zipcode_jp](https://github.com/kmdsbng/zipcode_jp)
 
-[![CircleCI](https://circleci.com/gh/kmdsbng/zipcodeJp.svg?style=svg)](https://circleci.com/gh/kmdsbng/zipcodeJp)
+[![CircleCI](https://circleci.com/gh/hrdtbs/zipcodeJp/tree/master.svg?style=svg)](https://circleci.com/gh/hrdtbs/zipcodeJp/tree/master)
 
 zipcodeJp provides Japan zip code database/API that is build by JSON file structure.
 You can setup your own database/API on your Web storage.
